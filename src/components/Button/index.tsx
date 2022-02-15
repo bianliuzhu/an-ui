@@ -3,10 +3,10 @@
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:09
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-15 23:06:19
+ * @LastEditTime: 2022-02-15 23:13:28
  */
 import classNames from "classnames";
-import { HtmlHTMLAttributes } from "react";
+
 export enum ButtonSize {
 	Large = "lg",
 	Small = "sm",
