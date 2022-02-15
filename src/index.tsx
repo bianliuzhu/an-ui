@@ -3,11 +3,11 @@
  * @Author: Gleason
  * @Date: 2022-02-13 10:51:54
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-13 12:49:31
+ * @LastEditTime: 2022-02-13 21:30:58
  */
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles/index.sass";
+import "./styles/index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

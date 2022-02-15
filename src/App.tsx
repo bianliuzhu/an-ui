@@ -3,27 +3,23 @@
  * @Author: Gleason
  * @Date: 2022-02-13 10:51:54
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-13 13:11:11
+ * @LastEditTime: 2022-02-15 23:07:35
  */
-
+import Button, { ButtonType, ButtonSize } from "./components/Button";
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<h1>2werwerewr</h1>
-				<h2>ssadfafdsasd</h2>
-				<p>
-					Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+			<Button>普通</Button>
+			<Button autoFocus>autoFocus</Button>
+			<Button size={ButtonSize.Large}>large</Button>
+			<Button size={ButtonSize.Small}>small</Button>
+			<Button disabled>禁用</Button>
+			<Button btnType={ButtonType.Primary}>primary</Button>
+			<Button btnType={ButtonType.Danger}>danger</Button>
+			<Button btnType={ButtonType.Link}>link</Button>
+			<Button btnType={ButtonType.Link} disabled>
+				link
+			</Button>
 		</div>
 	);
 }
