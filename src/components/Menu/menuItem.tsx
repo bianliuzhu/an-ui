@@ -3,13 +3,13 @@
  * @Author: Gleason
  * @Date: 2022-02-17 22:02:25
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-20 13:23:29
+ * @LastEditTime: 2022-02-22 21:51:57
  */
 import React, { useContext } from "react";
 import classNames from "classnames";
 import { MenuContext } from "./menu";
 export interface MenuItemProps {
-	index?: number;
+	index?: string;
 	disabled?: boolean;
 	classNmae?: string;
 	style?: React.CSSProperties;
@@ -22,7 +22,7 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
 		"is-active": context.index === index,
 	});
 	const handleClick = () => {
-		if (context.onSelect && !disabled && typeof index === "number") {
+		if (context.onSelect && !disabled && typeof index === "string") {
 			context.onSelect(index);
 		}
 	};

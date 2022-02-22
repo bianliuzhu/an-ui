@@ -3,7 +3,7 @@
  * @Author: Gleason
  * @Date: 2022-02-20 10:47:36
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-21 22:05:42
+ * @LastEditTime: 2022-02-22 21:58:31
  */
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
@@ -11,13 +11,13 @@ import Menu, { MenuProps } from "./menu";
 import MenuItem from "./menuItem";
 
 const testProps: MenuProps = {
-	defaultIndex: 0,
+	defaultIndex: "0",
 	onSelect: jest.fn(),
 	className: "test",
 };
 
 const testVerProps: MenuProps = {
-	defaultIndex: 0,
+	defaultIndex: "0",
 	mode: "vertical",
 };
 
