@@ -3,13 +3,14 @@
  * @Author: Gleason
  * @Date: 2022-02-13 10:51:54
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-22 22:13:41
+ * @LastEditTime: 2022-02-23 22:10:27
  */
 import Button, { ButtonType, ButtonSize } from "./components/Button";
 import Menu from "./components/Menu/menu";
 import MenuItem from "./components/Menu/menuItem";
 import SubMenu from "./components/Menu/subMenu";
-function App() {
+
+function App(): JSX.Element {
 	return (
 		<div className="App">
 			<div>

@@ -1,0 +1,6 @@
+# *.* eol=lf
+*.jpg -text
+*.png -text
+*.js eol=lf
+*.ts eol=lf
+*.json eol=lf
