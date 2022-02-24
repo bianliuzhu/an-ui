@@ -3,16 +3,23 @@
  * @Author: Gleason
  * @Date: 2022-02-13 10:51:54
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-23 22:10:27
+ * @LastEditTime: 2022-02-24 22:38:27
  */
 import Button, { ButtonType, ButtonSize } from "./components/Button";
 import Menu from "./components/Menu/menu";
 import MenuItem from "./components/Menu/menuItem";
 import SubMenu from "./components/Menu/subMenu";
-
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import Icon from "./components/Icon/icon";
+library.add(fas);
 function App(): JSX.Element {
 	return (
 		<div className="App">
+			<div>
+				<h1>ICON</h1>
+				<Icon icon="coffee" size="10x" theme="primary" />
+			</div>
 			<div>
 				<h1>按钮</h1>
 				<Button>普通</Button>
