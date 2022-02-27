@@ -3,7 +3,7 @@
  * @Author: Gleason
  * @Date: 2022-02-21 21:37:06
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-27 18:54:59
+ * @LastEditTime: 2022-02-27 19:13:14
  */
 import React, { useState, useContext, FunctionComponentElement } from "react";
 import classNames from "classnames";
@@ -30,6 +30,8 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
 	let timer: any;
 	const classes = classNames("menu-item submenu-item", className, {
 		"is-active": context.index === index,
+		"is-opened": menuOpen,
+		"is-vertical": context.mode === "vertical",
 	});
 
 	const handleClick = (e: React.MouseEvent) => {
