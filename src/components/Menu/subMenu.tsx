@@ -3,12 +3,13 @@
  * @Author: Gleason
  * @Date: 2022-02-21 21:37:06
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-22 22:12:44
+ * @LastEditTime: 2022-02-27 18:54:59
  */
 import React, { useState, useContext, FunctionComponentElement } from "react";
 import classNames from "classnames";
 import { MenuContext } from "./menu";
 import { MenuItemProps } from "./menuItem";
+import Icon from "components/Icon/icon";
 
 export interface SubMenuProps {
 	index?: string;
@@ -78,6 +79,7 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
 		<li key={index} className={classes} {...hoverEvent}>
 			<div className="submenu-title" {...clickEvent}>
 				{title}
+				<Icon icon="angle-down" className="arrow-icon" />
 			</div>
 			{renderChildren()}
 		</li>
