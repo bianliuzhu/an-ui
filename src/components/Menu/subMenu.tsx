@@ -3,7 +3,7 @@
  * @Author: Gleason
  * @Date: 2022-02-21 21:37:06
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-27 21:01:07
+ * @LastEditTime: 2022-02-28 22:55:07
  */
 import React, { useState, useContext, FunctionComponentElement } from "react";
 import classNames from "classnames";
@@ -11,7 +11,7 @@ import { CSSTransition } from "react-transition-group";
 import { MenuContext } from "./menu";
 import { MenuItemProps } from "./menuItem";
 import Icon from "components/Icon/icon";
-
+import Transition from "components/Transition/transition";
 export interface SubMenuProps {
 	index?: string;
 	title: string;
@@ -76,10 +76,12 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
 				throw new Error("⚠️警告：传入组件非 MenuItem 类型");
 			}
 		});
+		const animationType =
+			context.mode === "vertical" ? "zoom-in-left" : "zoom-in-top";
 		return (
-			<CSSTransition in={menuOpen} timeout={300} classNames="zoo-in-top" appear>
+			<Transition in={menuOpen} timeout={300} animation={animationType}>
 				<ul className={subMenuClasses}>{childrenConponent}</ul>
-			</CSSTransition>
+			</Transition>
 		);
 	};
 	return (
