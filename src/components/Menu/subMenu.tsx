@@ -3,7 +3,7 @@
  * @Author: Gleason
  * @Date: 2022-02-21 21:37:06
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-28 22:55:07
+ * @LastEditTime: 2022-02-28 22:58:26
  */
 import React, { useState, useContext, FunctionComponentElement } from "react";
 import classNames from "classnames";
@@ -79,7 +79,12 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
 		const animationType =
 			context.mode === "vertical" ? "zoom-in-left" : "zoom-in-top";
 		return (
-			<Transition in={menuOpen} timeout={300} animation={animationType}>
+			<Transition
+				in={menuOpen}
+				timeout={300}
+				animation={animationType}
+				wrapper={context.mode === "vertical" ? true : false}
+			>
 				<ul className={subMenuClasses}>{childrenConponent}</ul>
 			</Transition>
 		);
