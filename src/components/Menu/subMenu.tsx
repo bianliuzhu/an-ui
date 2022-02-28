@@ -3,10 +3,11 @@
  * @Author: Gleason
  * @Date: 2022-02-21 21:37:06
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-27 19:13:14
+ * @LastEditTime: 2022-02-27 21:01:07
  */
 import React, { useState, useContext, FunctionComponentElement } from "react";
 import classNames from "classnames";
+import { CSSTransition } from "react-transition-group";
 import { MenuContext } from "./menu";
 import { MenuItemProps } from "./menuItem";
 import Icon from "components/Icon/icon";
@@ -75,7 +76,11 @@ const SubMenu: React.FC<SubMenuProps> = (props) => {
 				throw new Error("⚠️警告：传入组件非 MenuItem 类型");
 			}
 		});
-		return <ul className={subMenuClasses}>{childrenConponent}</ul>;
+		return (
+			<CSSTransition in={menuOpen} timeout={300} classNames="zoo-in-top" appear>
+				<ul className={subMenuClasses}>{childrenConponent}</ul>
+			</CSSTransition>
+		);
 	};
 	return (
 		<li key={index} className={classes} {...hoverEvent}>
