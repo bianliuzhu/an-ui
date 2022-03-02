@@ -3,7 +3,7 @@
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:09
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-23 21:58:14
+ * @LastEditTime: 2022-03-01 22:46:03
  */
 import classNames from "classnames";
 
@@ -18,20 +18,47 @@ export enum ButtonType {
 	Link = "link",
 }
 interface BaseButtonProps {
+	/**
+	 * 跳转链接
+	 */
 	href?: string;
+	/**
+	 * button 尺寸
+	 */
 	size?: ButtonSize;
+	/**
+	 * button 类型
+	 */
 	btnType?: ButtonType;
+	/**
+	 * 是否禁用
+	 */
 	disabled?: boolean;
+	/**
+	 * 自定义样式 class 名称
+	 */
 	className?: string;
+	/**
+	 * 按钮显示文案可以是任意的ReactNode
+	 */
 	children?: React.ReactNode;
 }
-// 支持原生 button 属性
+
+/**
+ * 支持原生 button 属性
+ */
 type NativeButtonProps = BaseButtonProps &
 	React.ButtonHTMLAttributes<HTMLElement>;
-// 支持原生 anchor 属性
+
+/**
+ * 支持原生 anchor 属性
+ */
 type AnchorButtonProps = BaseButtonProps &
 	React.AnchorHTMLAttributes<HTMLElement>;
-// 使用 Partial 修饰所有属性变为可选
+
+/**
+ * 使用 Partial 修饰所有属性变为可选
+ */
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
 const Button: React.FC<ButtonProps> = (props) => {
