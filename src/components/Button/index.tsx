@@ -3,7 +3,7 @@
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:09
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-03 22:06:51
+ * @LastEditTime: 2022-03-03 22:19:34
  */
 import classNames from "classnames";
 
@@ -16,7 +16,7 @@ type ButtonType = "default" | "primary" | "danger" | "link";
 // 按钮属性
 interface BaseButtonProps {
 	/**
-	 * 跳转链接
+	 * 跳转链接，该属性仅在 btnType=link 时生效
 	 */
 	href?: string;
 	/**
@@ -24,19 +24,19 @@ interface BaseButtonProps {
 	 */
 	size?: ButtonSize;
 	/**
-	 * button 类型
+	 * 按钮类型
 	 */
 	btnType?: ButtonType;
 	/**
-	 * 是否禁用
+	 * 是否禁用按钮
 	 */
 	disabled?: boolean;
 	/**
-	 * 自定义样式 class 名称
+	 * 自定义样式 css class 名称
 	 */
 	className?: string;
 	/**
-	 * 按钮显示文案可以是任意的ReactNode
+	 * 按钮显示文案可以是任意的 ReactNode
 	 */
 	children?: React.ReactNode;
 }

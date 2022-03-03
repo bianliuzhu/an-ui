@@ -28,7 +28,7 @@
 		}
 	}
 }
-.btn-lg {
+.btn-large {
 	@include button-size(
 		$btn-padding-y-lg,
 		$btn-padding-x-lg,
@@ -36,7 +36,7 @@
 		$border-radius-lg
 	);
 }
-.btn-sm {
+.btn-small {
 	@include button-size(
 		$btn-padding-y-sm,
 		$btn-padding-x-sm,
