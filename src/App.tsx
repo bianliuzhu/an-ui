@@ -3,9 +3,9 @@
  * @Author: Gleason
  * @Date: 2022-02-13 10:51:54
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-24 22:38:27
+ * @LastEditTime: 2022-03-03 22:11:30
  */
-import Button, { ButtonType, ButtonSize } from "./components/Button";
+import Button from "./components/Button";
 import Menu from "./components/Menu/menu";
 import MenuItem from "./components/Menu/menuItem";
 import SubMenu from "./components/Menu/subMenu";
@@ -24,13 +24,13 @@ function App(): JSX.Element {
 				<h1>按钮</h1>
 				<Button>普通</Button>
 				<Button autoFocus>autoFocus</Button>
-				<Button size={ButtonSize.Large}>large</Button>
-				<Button size={ButtonSize.Small}>small</Button>
+				<Button size="large">large</Button>
+				<Button size="small">small</Button>
 				<Button disabled>禁用</Button>
-				<Button btnType={ButtonType.Primary}>primary</Button>
-				<Button btnType={ButtonType.Danger}>danger</Button>
-				<Button btnType={ButtonType.Link}>link</Button>
-				<Button btnType={ButtonType.Link} disabled>
+				<Button btnType="primary">primary</Button>
+				<Button btnType="danger">danger</Button>
+				<Button btnType="link">link</Button>
+				<Button btnType="link" disabled>
 					link
 				</Button>
 			</div>

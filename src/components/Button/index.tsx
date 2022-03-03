@@ -3,20 +3,17 @@
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:09
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-01 22:46:03
+ * @LastEditTime: 2022-03-03 22:06:51
  */
 import classNames from "classnames";
 
-export enum ButtonSize {
-	Large = "lg",
-	Small = "sm",
-}
-export enum ButtonType {
-	Primary = "primary",
-	Default = "default",
-	Danger = "danger",
-	Link = "link",
-}
+// 按钮大小
+type ButtonSize = "large" | "small";
+
+// 按钮类型
+type ButtonType = "default" | "primary" | "danger" | "link";
+
+// 按钮属性
 interface BaseButtonProps {
 	/**
 	 * 跳转链接
@@ -69,11 +66,11 @@ const Button: React.FC<ButtonProps> = (props) => {
 	const classes = classNames("btn", className, {
 		[`btn-${btnType}`]: btnType,
 		[`btn-${size}`]: size,
-		disabled: btnType === ButtonType.Link && disabled,
+		disabled: btnType === "link" && disabled,
 	});
 
 	// 判断是否为连接
-	if (btnType === ButtonType.Link && href) {
+	if (btnType === "link" && href) {
 		return (
 			<a href={href} className={classes} {...restProps}>
 				{children}
@@ -90,7 +87,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 // 设置默认属性
 Button.defaultProps = {
 	disabled: false,
-	btnType: ButtonType.Default,
+	btnType: "default",
 };
 
 export default Button;

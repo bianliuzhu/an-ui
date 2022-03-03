@@ -3,17 +3,17 @@
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:33
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-16 23:28:00
+ * @LastEditTime: 2022-03-03 22:12:27
  */
 import { render, screen, fireEvent } from "@testing-library/react";
-import Button, { ButtonType, ButtonSize, ButtonProps } from ".";
+import Button, { ButtonProps } from ".";
 
 const defaultProps = {
 	onClick: jest.fn(),
 };
 const testProps: ButtonProps = {
-	btnType: ButtonType.Primary,
-	size: ButtonSize.Large,
+	btnType: "primary",
+	size: "large",
 	className: "kclass",
 };
 const disabledProps: ButtonProps = {
@@ -41,7 +41,7 @@ describe("button 组件测试", () => {
 	});
 	it("a连接状态", () => {
 		render(
-			<Button btnType={ButtonType.Link} href="www.baidu.com">
+			<Button btnType="link" href="www.baidu.com">
 				link
 			</Button>
 		);
