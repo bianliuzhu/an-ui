@@ -1,9 +1,9 @@
 /*
- * @Description:
+ * @Description: 按钮组件
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:09
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-03 22:19:34
+ * @LastEditTime: 2022-03-03 22:37:06
  */
 import classNames from "classnames";
 
@@ -54,7 +54,7 @@ type AnchorButtonProps = BaseButtonProps &
 	React.AnchorHTMLAttributes<HTMLElement>;
 
 /**
- * 使用 Partial 修饰所有属性变为可选
+ * Partial 修饰所有属性变为可选
  */
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
