@@ -3,12 +3,12 @@
  * @Author: Gleason
  * @Date: 2022-03-01 22:38:10
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-04 05:47:03
+ * @LastEditTime: 2022-03-05 21:44:56
  */
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Button from "./index";
+import Button from "./button";
 
 export default {
 	title: "按钮",

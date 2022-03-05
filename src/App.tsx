@@ -3,9 +3,9 @@
  * @Author: Gleason
  * @Date: 2022-02-13 10:51:54
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-03 22:11:30
+ * @LastEditTime: 2022-03-05 21:44:47
  */
-import Button from "./components/Button";
+import Button from "./components/Button/button";
 import Menu from "./components/Menu/menu";
 import MenuItem from "./components/Menu/menuItem";
 import SubMenu from "./components/Menu/subMenu";
