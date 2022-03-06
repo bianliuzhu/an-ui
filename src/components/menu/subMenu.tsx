@@ -3,13 +3,13 @@
  * @Author: Gleason
  * @Date: 2022-02-21 21:37:06
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-06 22:28:17
+ * @LastEditTime: 2022-03-06 22:37:40
  */
 import React, { useState, useContext, FunctionComponentElement } from "react";
 import classNames from "classnames";
 import { MenuContext } from "./menu";
 import { MenuItemProps } from "./menuItem";
-import Icon from "components/Icon";
+import Icon from "components/icon";
 import Transition from "components/transition";
 export interface SubMenuProps {
 	index?: string;

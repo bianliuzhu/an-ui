@@ -3,12 +3,12 @@
  * @Author: Gleason
  * @Date: 2022-03-06 21:30:55
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-06 22:06:28
+ * @LastEditTime: 2022-03-06 22:36:37
  */
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Icon from ".";
+import Icon from "./index";
 
 export default {
 	title: "图标",

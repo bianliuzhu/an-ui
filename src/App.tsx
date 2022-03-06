@@ -3,15 +3,15 @@
  * @Author: Gleason
  * @Date: 2022-02-13 10:51:54
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-06 22:31:52
+ * @LastEditTime: 2022-03-06 22:35:50
  */
 import Button from "./components/button";
 import Menu from "./components/menu/menu";
-import MenuItem from "./components/Menu/menuItem";
+import MenuItem from "./components/menu/menuItem";
 import SubMenu from "./components/menu/subMenu";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-import Icon from "./components/Icon";
+import Icon from "./components/icon/index";
 library.add(fas);
 function App(): JSX.Element {
 	return (
