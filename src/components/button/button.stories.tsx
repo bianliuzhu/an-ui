@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import Button from "./index";
+import Button from "./Button";
 
 export default {
 	title: "按钮",
@@ -9,14 +9,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-	<Button
-		{...args}
-		onClick={(e) => {
-			console.log(e);
-		}}
-	>
-		按钮
-	</Button>
+	<Button {...args}>按钮</Button>
 );
 
 export const Primary = Template.bind({});
