@@ -27,7 +27,6 @@ const generateMenu = (props: MenuProps) => {
 			<MenuItem>active</MenuItem>
 			<MenuItem disabled>disabled</MenuItem>
 			<MenuItem>xyz</MenuItem>
-			<li>234234</li>
 		</Menu>
 	);
 };
@@ -45,7 +44,6 @@ describe("测试 menu 及 menuItem 组件", () => {
 		// 断言是否在document中存在 menu 元素
 		expect(menuElement).toBeInTheDocument();
 		expect(menuElement).toHaveClass("viking-menu");
-		// eslint-disable-next-line testing-library/no-node-access
 		expect(menuElement.getElementsByTagName("li").length).toEqual(3);
 		expect(disabledElement).toHaveClass("menu-item is-disabled");
 	});

@@ -1,16 +1,9 @@
 /*
  * @Description:
  * @Author: Gleason
- * @Date: 2022-03-05 21:46:24
- * @LastEditors: Gleason
- * @LastEditTime: 2022-03-05 21:48:10
- */
-/*
- * @Description:
- * @Author: Gleason
  * @Date: 2022-03-01 22:38:10
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-05 21:44:56
+ * @LastEditTime: 2022-03-05 22:14:28
  */
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
@@ -18,7 +11,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Icon from "./icon";
 
 export default {
-	title: "按钮",
+	title: "图标",
 	component: Icon,
 } as ComponentMeta<typeof Icon>;
 

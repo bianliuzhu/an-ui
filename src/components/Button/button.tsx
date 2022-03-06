@@ -3,7 +3,7 @@
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:09
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-03 22:37:06
+ * @LastEditTime: 2022-03-05 22:18:41
  */
 import classNames from "classnames";
 
@@ -57,7 +57,10 @@ type AnchorButtonProps = BaseButtonProps &
  * Partial 修饰所有属性变为可选
  */
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
-
+/**
+- Use an avatar for attributing actions or content to specific users.
+- The user's name should always be present when using Avatar – either printed beside the avatar or in a tooltip.
+**/
 const Button: React.FC<ButtonProps> = (props) => {
 	const { btnType, disabled, size, children, href, className, ...restProps } =
 		props;

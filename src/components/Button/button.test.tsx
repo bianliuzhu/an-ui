@@ -3,7 +3,7 @@
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:33
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-05 21:44:54
+ * @LastEditTime: 2022-03-05 21:57:23
  */
 import { render, screen, fireEvent } from "@testing-library/react";
 import Button, { ButtonProps } from "./button";
@@ -37,7 +37,7 @@ describe("button 组件测试", () => {
 	it("根据不同 props 显示样式", () => {
 		render(<Button {...testProps}>nice</Button>);
 		const element = screen.getByText("nice");
-		expect(element).toHaveClass("btn-primary btn-lg kclass");
+		expect(element).toHaveClass("btn-primary btn-large kclass");
 	});
 	it("a连接状态", () => {
 		render(

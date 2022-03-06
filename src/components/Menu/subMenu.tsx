@@ -3,11 +3,10 @@
  * @Author: Gleason
  * @Date: 2022-02-21 21:37:06
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-28 22:58:26
+ * @LastEditTime: 2022-03-05 22:02:01
  */
 import React, { useState, useContext, FunctionComponentElement } from "react";
 import classNames from "classnames";
-import { CSSTransition } from "react-transition-group";
 import { MenuContext } from "./menu";
 import { MenuItemProps } from "./menuItem";
 import Icon from "components/Icon/icon";
