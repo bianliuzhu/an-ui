@@ -3,12 +3,12 @@
  * @Author: Gleason
  * @Date: 2022-02-13 10:51:54
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-06 21:42:22
+ * @LastEditTime: 2022-03-06 22:31:52
  */
-import Button from "./components/Button";
-import Menu from "./components/Menu/menu";
+import Button from "./components/button";
+import Menu from "./components/menu/menu";
 import MenuItem from "./components/Menu/menuItem";
-import SubMenu from "./components/Menu/subMenu";
+import SubMenu from "./components/menu/subMenu";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import Icon from "./components/Icon";
