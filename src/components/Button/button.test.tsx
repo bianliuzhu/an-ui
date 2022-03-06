@@ -3,10 +3,10 @@
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:33
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-05 21:57:23
+ * @LastEditTime: 2022-03-06 21:42:27
  */
 import { render, screen, fireEvent } from "@testing-library/react";
-import Button, { ButtonProps } from "./button";
+import Button, { ButtonProps } from ".";
 
 const defaultProps = {
 	onClick: jest.fn(),

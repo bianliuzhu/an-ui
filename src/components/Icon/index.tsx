@@ -3,7 +3,7 @@
  * @Author: Gleason
  * @Date: 2022-02-24 22:10:30
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-24 22:31:17
+ * @LastEditTime: 2022-03-06 21:54:33
  */
 import React from "react";
 import classNames from "classnames";
@@ -36,5 +36,8 @@ const Icon: React.FC<IconProps> = (props) => {
 
 	return <FontAwesomeIcon className={classes} {...restProps} />;
 };
-
+Icon.defaultProps = {
+	theme: "primary",
+	icon: "adn",
+};
 export default Icon;

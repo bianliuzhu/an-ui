@@ -3,17 +3,14 @@
  * @Author: Gleason
  * @Date: 2022-02-13 11:29:09
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-05 22:18:41
+ * @LastEditTime: 2022-03-06 21:46:11
  */
 import classNames from "classnames";
 
-// 按钮大小
 type ButtonSize = "large" | "small";
 
-// 按钮类型
 type ButtonType = "default" | "primary" | "danger" | "link";
 
-// 按钮属性
 interface BaseButtonProps {
 	/**
 	 * 跳转链接，该属性仅在 btnType=link 时生效
@@ -41,31 +38,22 @@ interface BaseButtonProps {
 	children?: React.ReactNode;
 }
 
-/**
- * 支持原生 button 属性
- */
 type NativeButtonProps = BaseButtonProps &
 	React.ButtonHTMLAttributes<HTMLElement>;
 
-/**
- * 支持原生 anchor 属性
- */
 type AnchorButtonProps = BaseButtonProps &
 	React.AnchorHTMLAttributes<HTMLElement>;
 
-/**
- * Partial 修饰所有属性变为可选
- */
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
+
 /**
-- Use an avatar for attributing actions or content to specific users.
-- The user's name should always be present when using Avatar – either printed beside the avatar or in a tooltip.
+- 简约风按钮
+- 支持 HTML 原生各种属性，简单封装，内置5种主题色，多种状态，多种环境使用
 **/
 const Button: React.FC<ButtonProps> = (props) => {
 	const { btnType, disabled, size, children, href, className, ...restProps } =
 		props;
-	// btn btn-lg btn-primary
-	// 整合 class
+
 	const classes = classNames("btn", className, {
 		[`btn-${btnType}`]: btnType,
 		[`btn-${size}`]: size,
