@@ -3,11 +3,11 @@
  * @Author: Gleason
  * @Date: 2022-02-27 21:38:03
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-28 22:43:21
+ * @LastEditTime: 2022-03-06 19:15:33
  */
 import React from "react";
 import { CSSTransition } from "react-transition-group";
-import { CSSTransitionProps } from "react-transition-group/CSSTransition";
+import { CSSTransitionClassNames } from "react-transition-group/CSSTransition";
 
 type AnimationName =
 	| "zoom-in-top"
@@ -15,12 +15,16 @@ type AnimationName =
 	| "zoom-in-bottom"
 	| "zoom-in-right";
 
-interface TransitionProps extends CSSTransitionProps {
+interface TransitionCOMProps {
+	classNames?: string | CSSTransitionClassNames | undefined;
+	in?: boolean;
 	animation?: AnimationName;
 	wrapper?: boolean;
+	timeout: number;
+	unmountOnExit?: boolean;
 }
 
-const Transition: React.FC<TransitionProps> = (props) => {
+const Transition: React.FC<TransitionCOMProps> = (props) => {
 	const { children, classNames, animation, wrapper, ...restProps } = props;
 	return (
 		<CSSTransition
@@ -32,8 +36,8 @@ const Transition: React.FC<TransitionProps> = (props) => {
 	);
 };
 Transition.defaultProps = {
+	wrapper: true,
 	unmountOnExit: true,
-	appear: true,
 };
 
 export default Transition;
