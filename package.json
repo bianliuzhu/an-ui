@@ -26,12 +26,14 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build": "npm run clean && npm run build-ts && npm run build-css",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
+		"clean": "rimraf ./build",
 		"prepare": "husky install",
 		"doc": "start-storybook -p 6006 -s public",
 		"build-doc": "build-storybook -s public",
+		"build-css": "node-sass ./src/styles/index.scss ./build/index.css",
 		"build-ts": "tsc -p tsconfig.build.json"
 	},
 	"eslintConfig": {
@@ -87,6 +89,7 @@
 		"husky": "^7.0.4",
 		"jest-watch-typeahead": "^0.6.5",
 		"prettier": "2.5.1",
+		"rimraf": "^3.0.2",
 		"stylelint-config-prettier": "^9.0.3",
 		"webpack": "^5.69.1"
 	}
