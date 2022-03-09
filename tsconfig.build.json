@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"outDir": "build",
+		"module": "ESNext",
+		"target": "ES5",
+		"declaration": true,
+		"jsx": "react"
+	},
+	"include": ["src"],
+	"exclude": ["src/**/*.test.tsx", "src/**/*.stories.tsx"]
+}
