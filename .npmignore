@@ -1,0 +1,16 @@
+node_modules/
+.vscode/
+build/
+dist/
+scripts/
+src/
+.husky/
+.editorconfig
+.eslintrc.js
+.gitattributes
+.gitignore
+.prettierrc.json
+.package-lock.json
+.DS_Store
+.storybook
+rollup.config.js
