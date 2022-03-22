@@ -3,9 +3,9 @@
  * @Author: Gleason
  * @Date: 2022-02-20 10:47:36
  * @LastEditors: Gleason
- * @LastEditTime: 2022-02-22 21:58:31
+ * @LastEditTime: 2022-03-22 22:10:46
  */
-import React from "react";
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import Menu, { MenuProps } from "./menu";
 import MenuItem from "./menuItem";
@@ -44,6 +44,7 @@ describe("测试 menu 及 menuItem 组件", () => {
 		// 断言是否在document中存在 menu 元素
 		expect(menuElement).toBeInTheDocument();
 		expect(menuElement).toHaveClass("viking-menu");
+		// eslint-disable-next-line testing-library/no-node-access
 		expect(menuElement.getElementsByTagName("li").length).toEqual(3);
 		expect(disabledElement).toHaveClass("menu-item is-disabled");
 	});

@@ -3,9 +3,9 @@
  * @Author: Gleason
  * @Date: 2022-03-06 21:30:55
  * @LastEditors: Gleason
- * @LastEditTime: 2022-03-09 21:26:14
+ * @LastEditTime: 2022-03-22 22:10:35
  */
-import React from "react";
+
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import Icon from "./Icon";
