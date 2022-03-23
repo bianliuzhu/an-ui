@@ -20,7 +20,7 @@
 		"build-doc": "build-storybook -s public",
 		"build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
 		"build-ts": "tsc -p tsconfig.build.json",
-		"prepublish": "echo \"this is simple -- foo\""
+		"prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
 	},
 	"peerDependencies": {
 		"react": ">=16.8.0",
