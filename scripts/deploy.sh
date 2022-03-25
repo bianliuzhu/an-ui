@@ -27,7 +27,7 @@ if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
     git checkout gh-pages
     # 删掉旧的内容
     git rm -rf .
-else 
+else
     git checkout --orphan gh-pages
 fi
 

@@ -1,6 +1,6 @@
 {
 	"name": "ui-an",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"private": false,
 	"description": "react components library",
 	"author": "Bianliuzhu",
@@ -46,7 +46,7 @@
 	"files": [
 		"dist"
 	],
-	"homepage": "https://github.com/bianliuzhu/an-ui",
+	"homepage": "https://bianliuzhu.github.io/an-ui/",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/bianliuzhu/an-ui"
