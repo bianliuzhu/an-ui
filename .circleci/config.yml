@@ -28,10 +28,13 @@ jobs:
       # 安装依赖
       - run: npm install
 
+      # 运行测试
+      - run: npm run test:nowatch
+
       # 构建文档
       - run: npm run build-doc
 
-      # 授权执行权限
+      # 授权执行
       - run: chmod +x scripts/deploy.sh
 
       # 运行部署脚本
