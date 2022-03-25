@@ -6,7 +6,8 @@ version: 2
 jobs:
   build:
     docker:
-      - cimg: circleci/node:latest
+      # specify the version you desire here
+      - image: circleci/node:latest
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -27,7 +28,12 @@ jobs:
 
       - run: npm install
 
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
       # run tests!
       - run: node --version
 
-      - run: npm run doc
+      - run: npm run build-doc
