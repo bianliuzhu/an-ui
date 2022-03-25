@@ -10,30 +10,39 @@ jobs:
     working_directory: ~/repo
 
     steps:
+      - checkout
+
       - add_ssh_keys:
           fingerprints:
             - "27:54:5f:b8:eb:d3:18:2e:f1:85:5f:95:8a:83:2a:4c"
-      - checkout
+
       - restore_cache:
           keys:
             - an-ui-dependencies-{{ checksum "package.json" }}
             # 如果找不到完全匹配的缓存，使用最新缓存
             - an-ui-dependencies-
 
+      # 检查 node 及 npm 版本
+      - run: node --version && npm -v
+
       # 安装依赖
       - run: npm install
+
+      # 构建文档
+      - run: npm run build-doc
+
+      # 授权执行权限
+      - run: chmod +x scripts/deploy.sh
+
+      # 运行部署脚本
+      - run: ./scripts/deploy.sh
+
+      # 上传测试结果
+      - store_test_results:
+          path: /tmp/test-reports
 
       # 设置缓存
       - save_cache:
           paths:
             - node_modules
           key: an-ui-dependencies-{{ checksum "package.json" }}
-
-      # 检查 node 及 npm 版本
-      - run: node --version && npm -v
-
-      - run: npm run build-doc
-
-      - run: chmod +x scripts/deploy.sh
-
-      - run: ./scripts/deploy.sh
