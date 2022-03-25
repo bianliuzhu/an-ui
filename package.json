@@ -8,19 +8,18 @@
 	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "npm run clean && npm run build-ts && npm run build-css",
+		"start": "start-storybook -p 6006 -s public",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject",
 		"clean": "rimraf ./dist",
 		"lint": "eslint --ext js,ts,tsx src --max-warnings 3",
 		"test:nowatch": "cross-env CI=true react-scripts test",
-		"prepare": "husky install",
-		"doc": "start-storybook -p 6006 -s public",
 		"build-doc": "build-storybook -s public",
 		"build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
 		"build-ts": "tsc -p tsconfig.build.json",
-		"prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
+		"build": "npm run clean && npm run build-ts && npm run build-css",
+		"prepublishOnly": "npm run test:nowatch && npm run lint && npm run build",
+		"prepare": "husky install",
+		"eject": "react-scripts eject"
 	},
 	"peerDependencies": {
 		"react": ">=16.8.0",
