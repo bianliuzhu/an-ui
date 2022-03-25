@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:latest
     branches:
       only:
-        - main
+        main
 
     working_directory: ~/repo
 
