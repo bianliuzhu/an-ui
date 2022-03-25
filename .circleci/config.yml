@@ -2,7 +2,6 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:latest
     branches:
       only:
@@ -14,9 +13,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "27:54:5f:b8:eb:d3:18:2e:f1:85:5f:95:8a:83:2a:4c"
-
       - checkout
-
       - restore_cache:
           keys:
             - an-ui-dependencies-{{ checksum "package.json" }}
@@ -24,9 +21,7 @@ jobs:
             - an-ui-dependencies-
 
       # 安装依赖
-      - run:
-        name: Install
-        command: npm install
+      - run: npm install
 
       # 设置缓存
       - save_cache:
