@@ -33,3 +33,7 @@ jobs:
       - run: node --version && npm -v
 
       - run: npm run build-doc
+
+      - run: chmod +x scripts/deploy.sh
+
+      - run: ./scripts/deploy.sh
