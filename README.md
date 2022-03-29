@@ -4,7 +4,7 @@
 
 ## 安装
 
-`npm i ui-an --save-dev`
+`npm i ui-an --save`
 
 ## 文档地址
 
